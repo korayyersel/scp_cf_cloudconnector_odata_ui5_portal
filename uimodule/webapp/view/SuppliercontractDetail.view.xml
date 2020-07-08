@@ -1,0 +1,13 @@
+ <mvc:View controllerName="qperior.backendODataApp.controller.SuppliercontractDetail"
+  displayBlock="true"
+  xmlns="sap.m"
+  xmlns:mvc="sap.ui.core.mvc">
+  <Page id="ProductDetail" title="Detail Page">
+    <VBox>
+      <Text text="Purchase Order Type: {PurchaseOrderType}" />
+      <Text text="Document Currency: {DocumentCurrency}" />
+      <Text text="Status Text: {PurchasingDocumentStatus_Text}" />
+      <Text text="Organisation: {PurchasingOrganizationName}" />
+    </VBox>
+  </Page>
+</mvc:View>

@@ -1,0 +1,16 @@
+{
+  "generator-easy-ui5": {
+    "projectname": "backendODataApp",
+    "namespace": "qperior",
+    "platform": "Fiori Launchpad on Cloud Foundry",
+    "viewtype": "XML",
+    "viewname": "MainView",
+    "ui5libs": "Content delivery network (SAPUI5)",
+    "newdir": true,
+    "namespaceURI": "qperior",
+    "uimodules": [
+      "uimodule"
+    ],
+    "setupCompleted": true
+  }
+}

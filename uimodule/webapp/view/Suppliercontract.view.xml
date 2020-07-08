@@ -1,0 +1,12 @@
+ <mvc:View controllerName="qperior.backendODataApp.controller.Suppliercontract"
+  displayBlock="true"
+  xmlns="sap.m"
+  xmlns:mvc="sap.ui.core.mvc">
+  <Page id="Contracts" title="Purchase Orders">
+    <content>
+      <List items="{/C_SupplierPurOrder}">
+        <StandardListItem type="Navigation" title="{PurchaseOrder}" press="handleListItem" />
+      </List>
+    </content>
+  </Page>
+</mvc:View>

@@ -1,0 +1,6 @@
+ <mvc:View controllerName="qperior.backendODataApp.controller.MainView"
+  displayBlock="true"
+  xmlns="sap.m"
+  xmlns:mvc="sap.ui.core.mvc">
+  <App id="idAppControl" />
+</mvc:View>

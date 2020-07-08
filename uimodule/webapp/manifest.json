@@ -1,0 +1,149 @@
+{
+  "_version": "1.12.0",
+  "sap.app": {
+    "id": "qperior.backendODataApp",
+    "type": "application",
+    "i18n": "i18n/i18n.properties",
+    "applicationVersion": {
+      "version": "1.0.0"
+    },
+    "title": "{{appTitle}}",
+    "description": "{{appDescription}}",
+    "crossNavigation": {
+      "inbounds": {
+        "intent1": {
+          "signature": {
+            "parameters": {},
+            "additionalParameters": "allowed"
+          },
+          "semanticObject": "uimodule",
+          "action": "display",
+          "title": "Fiori App",
+          "description": "App Description",
+          "icon": "sap-icon://add"
+        }
+      }
+    },
+    "dataSources": {
+      "C_SUPPLIER_FS_SRV": {
+        "uri": "/sap/opu/odata/sap/C_SUPPLIER_FS_SRV",
+        "type": "OData",
+        "settings": {
+          "localUri": "localService//sap/opu/odata/sap/C_SUPPLIER_FS_SRV/metadata.xml"
+        }
+      }
+    }
+  },
+  "sap.ui": {
+    "technology": "UI5",
+    "icons": {
+      "icon": "",
+      "favIcon": "",
+      "phone": "",
+      "phone@2": "",
+      "tablet": "",
+      "tablet@2": ""
+    },
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    }
+  },
+  "sap.ui5": {
+    "rootView": {
+      "viewName": "qperior.backendODataApp.view.MainView",
+      "type": "XML",
+      "async": true,
+      "id": "idAppControl"
+    },
+    "dependencies": {
+      "minUI5Version": "1.60.0",
+      "libs": {
+        "sap.ui.core": {},
+        "sap.m": {},
+        "sap.ui.layout": {}
+      }
+    },
+    "contentDensities": {
+      "compact": true,
+      "cozy": true
+    },
+    "models": {
+      "i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "settings": {
+          "bundleName": "qperior.backendODataApp.i18n.i18n"
+        }
+      },
+      "": {
+        "type": "sap.ui.model.odata.v2.ODataModel",
+        "settings": {
+          "defaultOperationMode": "Server",
+          "defaultBindingMode": "TwoWay",
+          "defaultCountMode": "Inline",
+          "preload": true
+        },
+        "dataSource": "C_SUPPLIER_FS_SRV"
+      }
+    },
+    "resources": {
+      "css": [
+        {
+          "uri": "css/style.css"
+        }
+      ]
+    },
+    "routing": {
+      "config": {
+        "routerClass": "sap.m.routing.Router",
+        "viewType": "XML",
+        "viewPath": "qperior.backendODataApp.view",
+        "controlId": "idAppControl",
+        "controlAggregation": "pages",
+        "async": true
+      },
+      "routes": [
+        {
+          "name": "RouteMainView",
+          "pattern": "RouteMainView",
+          "target": [
+            "TargetMainView"
+          ]
+        },
+        {
+          "name": "Suppliercontract",
+          "pattern": "",
+          "target": [
+            "TargetSuppliercontract"
+          ]
+        },
+        {
+          "name": "SuppliercontractDetail",
+          "pattern": "C_SupplierPurOrder/{id}",
+          "target": [
+            "TargetSuppliercontractDetail"
+          ]
+        }
+      ],
+      "targets": {
+        "TargetMainView": {
+          "viewType": "XML",
+          "viewLevel": 1,
+          "viewId": "idAppControl",
+          "viewName": "MainView"
+        },
+        "TargetSuppliercontract": {
+          "viewType": "XML",
+          "viewId": "Suppliercontract",
+          "viewName": "Suppliercontract"
+        },
+        "TargetSuppliercontractDetail": {
+          "viewType": "XML",
+          "viewId": "SuppliercontractDetail",
+          "viewName": "SuppliercontractDetail"
+        }
+      }
+    }
+  }
+}
