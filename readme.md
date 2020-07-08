@@ -1,5 +1,6 @@
 # backendODataApp
 Used links and tools:
++ https://developers.sap.com/tutorials/cp-cf-sapui5-local-setup.html
 + https://developers.sap.com/tutorials/sapui5-fiori-cf-create-project.html
 + https://developers.sap.com/tutorials/sapui5-fiori-cf-display-data.html
 
@@ -10,6 +11,7 @@ Used links and tools:
 Applications / Modules:
 + backendODataApp	
 + backendODataApp_launchpad_deployer
+
 Services / Resources:
 + backendODataApp_conn
 + backendODataApp_destination
